@@ -1,0 +1,24 @@
+{
+  "name": "@dsh-external/dsh-pwsh-encoding-fix",
+  "version": "1.0.0",
+  "description": "Fix garbled non-ASCII output from the pwsh tool on Windows: native command output is decoded with the system ANSI codepage inside pwsh and re-emitted as UTF-8. 修复 pwsh 工具中文/非 ASCII 输出乱码。",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT"
+}

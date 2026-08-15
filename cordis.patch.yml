@@ -1,0 +1,8 @@
+# Activation row for the pwsh-encoding-fix bundle.
+#
+# When this package joins a profile's `dsh.profile.bundles` (via
+# `dsh plugin add`), this patch is applied as that profile's bundle layer and
+# the row below mounts the plugin at startup. No manual editing needed.
+- insert:
+    - id: pwsh-encoding-fix
+      name: '@dsh-external/dsh-pwsh-encoding-fix'
