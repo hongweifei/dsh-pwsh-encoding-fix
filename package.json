@@ -1,7 +1,7 @@
 {
   "name": "@dsh-external/dsh-pwsh-encoding-fix",
-  "version": "1.0.0",
-  "description": "Fix garbled non-ASCII output from the pwsh tool on Windows: native command output is decoded with the system ANSI codepage inside pwsh and re-emitted as UTF-8. 修复 pwsh 工具中文/非 ASCII 输出乱码。",
+  "version": "2.0.0",
+  "description": "Fix garbled non-ASCII output from the pwsh tool on Windows: native output (ANSI or UTF-8) is captured byte-preserving inside pwsh and decoded per-segment (strict UTF-8 else ANSI) before re-emitting as UTF-8. 修复 pwsh 工具中文/非 ASCII 输出乱码（兼容 GBK 与 UTF-8 两种原生输出）。",
   "private": true,
   "type": "module",
   "main": "lib/index.js",
